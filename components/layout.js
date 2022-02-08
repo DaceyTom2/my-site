@@ -1,5 +1,6 @@
 import Head from "next/head";
 import TextLink from "../components/atoms/TextLink";
+import IconLink from "../components/atoms/IconLink"
 import Link from "next/link";
 
 const name = "Thomas Dacey";
@@ -36,9 +37,10 @@ export default function Layout(props) {
           
         </div>
         <div className="flex-auto"></div>
-        <div className="flex h-12 w-60">
+        <div className="flex h-12">
           <TextLink href="/home" text="Home" />
           <TextLink href="/about" text="About" />
+          <IconLink href="https://github.com/DaceyTom2" icon="github" />
         </div>
       </header>
       <main>{props.children}</main>
