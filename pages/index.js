@@ -14,7 +14,7 @@ export default function Splash() {
         <h1 className="text-gray-700 text-3xl font-bold underline p-5">Tom's site</h1>
         <div className="m-auto text-center">
           <ButtonLink href="/home" text="English" />
-          <ButtonLink href="/fr/home" text="francais" />
+          <ButtonLink href="/fr/home" text="français" />
         </div>
       </div>
     </div>
