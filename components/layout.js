@@ -59,7 +59,7 @@ export default function Layout(props) {
           <IconLink href="https://github.com/DaceyTom2" icon="github" />
         </div>
       </header>
-      <main className="mx-auto max-w-7xl px-2">{props.children}</main>
+      <main className="mx-auto max-w-6xl px-2">{props.children}</main>
     </div>
   );
 }
