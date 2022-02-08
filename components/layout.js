@@ -37,7 +37,7 @@ export default function Layout(props) {
           
         </div>
         <div className="flex-auto"></div>
-        <div className="h-12 hidden md:flex">
+        <div className="h-12 hidden sm:flex">
           <TextLink href="/home" text="Home" />
           <TextLink href="/about" text="About" />
           <IconLink href="https://github.com/DaceyTom2" icon="github" />
