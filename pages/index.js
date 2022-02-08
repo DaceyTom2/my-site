@@ -1,8 +1,6 @@
-import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
 import ButtonLink from "../components/atoms/ButtonLink";
 
-export default function Splash() {
+export default function Splash(props) {
   return (
     <div className="flex h-screen">
       <div className="m-auto flex-col text-center">
@@ -11,7 +9,12 @@ export default function Splash() {
           src="images/TLogo.png"
           alt=""
         />
-        <h1 className="text-gray-700 text-3xl font-bold underline p-5" lang="en" >Tom's site</h1>
+        <h1
+          className="text-gray-700 text-3xl font-bold underline p-5"
+          lang="en"
+        >
+          Tom's site
+        </h1>
         <div className="m-auto text-center">
           <ButtonLink href="/home" text="English" lang="en" />
           <ButtonLink href="/fr/home" text="français" lang="fr" />
@@ -19,4 +22,12 @@ export default function Splash() {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      splash: true,
+    },
+  };
 }

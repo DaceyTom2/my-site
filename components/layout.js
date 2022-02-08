@@ -1,6 +1,6 @@
 import Head from "next/head";
 import TextLink from "../components/atoms/TextLink";
-import IconLink from "../components/atoms/IconLink"
+import IconLink from "../components/atoms/IconLink";
 import Link from "next/link";
 
 const name = "Thomas Dacey";
@@ -26,20 +26,36 @@ export default function Layout(props) {
       </Head>
       <header className="h-16 flex border-b-2 border-gray-300 p-2 align-middle">
         <div className="flex h-12 w-80">
-          <Link href="/home">
+          {!props.splash ? (
+            <Link href="/home">
+              <img
+                className="object-cover h-auto w-24 p-1 rounded-lg"
+                src="images/TLogo.png"
+                alt=""
+              />
+            </Link>
+          ) : (
             <img
               className="object-cover h-auto w-24 p-1 rounded-lg"
               src="images/TLogo.png"
               alt=""
             />
-          </Link>
-          <span className="text-2xl text-center p-2 text-gray-700">Tom's site</span>
-          
+          )}
+
+          <span className="text-2xl text-center p-2 text-gray-700">
+            Tom's site
+          </span>
         </div>
         <div className="flex-auto"></div>
         <div className="h-12 hidden sm:flex">
-          <TextLink href="/home" text="Home" />
-          <TextLink href="/about" text="About" />
+          {!props.splash ? (
+            <>
+              <TextLink href="/home" text="Home" />
+              <TextLink href="/about" text="About" />
+            </>
+          ) : (
+            ""
+          )}
           <IconLink href="https://github.com/DaceyTom2" icon="github" />
         </div>
       </header>
