@@ -10,6 +10,7 @@
     "autoprefixer": "^10.4.2",
     "date-fns": "^2.11.1",
     "gray-matter": "^4.0.2",
+    "husky": "^7.0.4",
     "next": "latest",
     "postcss": "^8.4.6",
     "prettier": "^2.5.1",
