@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import TextLink from "../components/atoms/TextLink";
 import Link from "next/link";
 
 const name = "Thomas Dacey";
@@ -7,7 +7,7 @@ export const siteTitle = "Next.js Sample Website";
 
 export default function Layout(props) {
   return (
-    <div>
+    <div className="min-h-screen bg-gradient-to-r from-gray-400 to-blue-300">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -23,47 +23,25 @@ export default function Layout(props) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header>
-        {props.home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              height={144}
-              width={144}
-              alt={name}
+      <header className="h-16 flex border-b-2 border-gray-300 p-2 align-middle">
+        <div className="flex h-12 w-80">
+          <Link href="/home">
+            <img
+              className="object-cover h-auto w-24 p-1 rounded-lg"
+              src="images/TLogo.png"
+              alt=""
             />
-            <h1>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2>
-              <Link href="/">
-                <a>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
+          </Link>
+          <span className="text-2xl text-center p-2 text-gray-700">Tom's site</span>
+          
+        </div>
+        <div className="flex-auto"></div>
+        <div className="flex h-12 w-60">
+          <TextLink href="/home" text="Home" />
+          <TextLink href="/about" text="About" />
+        </div>
       </header>
       <main>{props.children}</main>
-      {!props.splash && (
-        <div>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
     </div>
   );
 }
