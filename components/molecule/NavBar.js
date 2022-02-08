@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function NavBar(props) {
   const [OpenNav, setOpenNav] = useState(false);
-    
+
   const handleClick = (e) => {
     setOpenNav(!OpenNav);
   };
@@ -39,7 +39,7 @@ export default function NavBar(props) {
           </li>
         </ul>
         <div className="sm:hidden">
-            <IconButton icon="x" size="sm" onClick={handleClick} />
+          <IconButton icon="x" size="sm" onClick={handleClick} />
         </div>
       </div>
     </>

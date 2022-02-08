@@ -3,6 +3,9 @@ import ImageCard from "../components/molecule/ImageCard";
 export default function About() {
   return (
     <>
+      <Head>
+        <title>About - Tom's site</title>
+      </Head>
       <h1 className="text-3xl py-2 text-gray-700 font-bold">About</h1>
       <h2 className="text-xl pt-2 text-gray-700">Myself</h2>
       <ImageCard
