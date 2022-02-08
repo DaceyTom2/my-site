@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
 
-const name = 'Thomas Dacey'
-export const siteTitle = 'Next.js Sample Website'
+const name = "Thomas Dacey";
+export const siteTitle = "Next.js Sample Website";
 
 export default function Layout(props) {
   return (
@@ -65,5 +65,5 @@ export default function Layout(props) {
         </div>
       )}
     </div>
-  )
+  );
 }
