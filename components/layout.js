@@ -1,6 +1,5 @@
 import Head from "next/head";
-import TextLink from "../components/atoms/TextLink";
-import IconLink from "../components/atoms/IconLink";
+import NavBar from "../components/molecule/NavBar";
 import Link from "next/link";
 
 const name = "Thomas Dacey";
@@ -53,22 +52,7 @@ export default function Layout(props) {
           </span>
         </div>
         <div className="flex-auto"></div>
-        {/* Hamburger Menu */}
-        <div className="h-12 flex sm:hidden">
-          <IconLink href="https://github.com/DaceyTom2" icon="hamburger" />
-        </div>
-        {/* Flex Menu */}
-        <div className="h-12 hidden sm:flex">
-          {!props.splash ? (
-            <>
-              <TextLink href="/home" text="Home" />
-              <TextLink href="/about" text="About" />
-            </>
-          ) : (
-            ""
-          )}
-          <IconLink href="https://github.com/DaceyTom2" icon="github" />
-        </div>
+        <NavBar></NavBar>
       </header>
       <main className="mx-auto max-w-6xl px-2 pb-1">{props.children}</main>
     </div>
