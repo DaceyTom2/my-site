@@ -8,7 +8,13 @@ export const siteTitle = "Next.js Sample Website";
 
 export default function Layout(props) {
   return (
-    <div className={props.splash?"min-h-screen bg-gradient-to-r from-gray-400 to-blue-300":"min-h-screen"}>
+    <div
+      className={
+        props.splash
+          ? "min-h-screen bg-gradient-to-r from-gray-400 to-blue-300"
+          : "min-h-screen"
+      }
+    >
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -47,6 +53,11 @@ export default function Layout(props) {
           </span>
         </div>
         <div className="flex-auto"></div>
+        {/* Hamburger Menu */}
+        <div className="h-12 flex sm:hidden">
+          <IconLink href="https://github.com/DaceyTom2" icon="hamburger" />
+        </div>
+        {/* Flex Menu */}
         <div className="h-12 hidden sm:flex">
           {!props.splash ? (
             <>
