@@ -11,10 +11,10 @@ export default function Splash() {
           src="images/TLogo.png"
           alt=""
         />
-        <h1 className="text-gray-700 text-3xl font-bold underline p-5">Tom's site</h1>
+        <h1 className="text-gray-700 text-3xl font-bold underline p-5" lang="en" >Tom's site</h1>
         <div className="m-auto text-center">
-          <ButtonLink href="/home" text="English" />
-          <ButtonLink href="/fr/home" text="français" />
+          <ButtonLink href="/home" text="English" lang="en" />
+          <ButtonLink href="/fr/home" text="français" lang="fr" />
         </div>
       </div>
     </div>
