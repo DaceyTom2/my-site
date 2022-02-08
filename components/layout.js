@@ -1,14 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from './layout.module.css'
 import Link from 'next/link'
 
 const name = 'Thomas Dacey'
 export const siteTitle = 'Next.js Sample Website'
 
-export default function Layout({ children, home }) {
+export default function Layout(props) {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -24,8 +23,8 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        {home ? (
+      <header>
+        {props.home ? (
           <>
             <Image
               priority
@@ -57,9 +56,9 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
+      <main>{props.children}</main>
+      {!props.splash && (
+        <div>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
