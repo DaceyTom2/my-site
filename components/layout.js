@@ -8,7 +8,7 @@ export const siteTitle = "Next.js Sample Website";
 
 export default function Layout(props) {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-gray-400 to-blue-300">
+    <div className={props.splash?"min-h-screen bg-gradient-to-r from-gray-400 to-blue-300":"min-h-screen"}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -24,7 +24,7 @@ export default function Layout(props) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className="h-16 flex border-b-2 border-gray-300 p-2 align-middle">
+      <header className="h-16 flex border-b-2 border-gray-300 p-2 align-middle bg-gradient-to-r from-gray-400 to-blue-300">
         <div className="flex h-12 w-80">
           {!props.splash ? (
             <Link href="/home">
@@ -59,7 +59,7 @@ export default function Layout(props) {
           <IconLink href="https://github.com/DaceyTom2" icon="github" />
         </div>
       </header>
-      <main className="mx-auto max-w-6xl px-2">{props.children}</main>
+      <main className="mx-auto max-w-6xl px-2 pb-1">{props.children}</main>
     </div>
   );
 }
