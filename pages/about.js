@@ -1,22 +1,15 @@
-import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
-import ButtonLink from "../components/atoms/ButtonLink";
+import ImageCard from "../components/molecule/ImageCard";
 
 export default function About() {
   return (
-    <div className="flex h-screen bg-gradient-to-r from-gray-400 to-blue-300">
-      <div className="m-auto flex-col text-center">
-        <img
-          class="object-cover h-72 w-96 rounded-lg"
-          src="images/profile.jpg"
-          alt=""
-        />
-        <h1 className="text-3xl font-bold underline p-5">About</h1>
-        <div className="m-auto text-center">
-          <ButtonLink href="/home" text="English" />
-          <ButtonLink href="/fr/home" text="francais" />
-        </div>
-      </div>
+    <div>
+      <h1 className="text-2xl p-2 text-gray-700" >About</h1>
+      <h2>Myself</h2>
+      <ImageCard header="Thomas" paragraph="test" image="images/TLogo.png"></ImageCard>
+      <h2>Pets</h2>
+      <ImageCard header="Mabel" paragraph="test" image="images/Mabel.png"></ImageCard>
+      <ImageCard header="Lou" paragraph="test" image="images/Lou.png"></ImageCard>
+      <ImageCard header="Stout" paragraph="test" image="images/Stout.png"></ImageCard>
     </div>
   );
 }
