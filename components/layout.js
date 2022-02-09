@@ -52,7 +52,7 @@ export default function Layout(props) {
           </span>
         </div>
         <div className="flex-auto"></div>
-        <NavBar></NavBar>
+        <NavBar splash={props.splash}></NavBar>
       </header>
       <main className="mx-auto max-w-6xl px-2 pb-1">{props.children}</main>
     </div>
