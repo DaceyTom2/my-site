@@ -1,3 +1,4 @@
+import Head from "next/head";
 import ImageCard from "../components/molecule/ImageCard";
 
 export default function About() {

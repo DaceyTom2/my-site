@@ -1,3 +1,4 @@
+import Head from "next/head";
 import ButtonLink from "../components/atoms/ButtonLink";
 
 export default function Splash(props) {
